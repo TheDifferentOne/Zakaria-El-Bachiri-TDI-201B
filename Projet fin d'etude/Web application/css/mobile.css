@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primaryColor : #3BC6FE;
+    --josefin : 'Josefin Sans';
+    --monoton : 'Monoton';
+    --poppins:'Poppins';
+    --padding:11rem;
+    --animation:800ms ease-out;
+}
+
+body{font-size: 62.5%;background-color: var(--primaryColor);}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[type="submit"]{cursor: pointer;}
+
+*::selection{
+    background-color: white;
+    color: var(--primaryColor);
+}
+
+li{list-style: none;}
+
+a{text-decoration: none;}
+
+.padding{padding:0 var(--padding)}
+    
+.currentPage{ 
+    transition: background var(--animation),color var(--animation);
+    border: white 2px solid;
+    border-radius: .5rem;
+    padding: .8rem 1rem;
+}
+
+/*********** Nav and logo ***********/
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem!important;
+    margin-bottom: 2rem;
+}
+
+
+nav ul{
+    display: flex;
+    font-family: var(--josefin),cursive;
+    font-size: large;
+    align-items: center;
+}
+
+nav ul li:not(:last-child){margin-right: 2rem;}
+
+nav a{
+    display: inline-block; 
+    padding:1rem .5rem;
+    color: white;
+}
+
+
+/* * Container & showcase */
+#container{
+    background-color: white;
+    height: 100%;  
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+#right{
+    height: 500px;
+    border: var(--primaryColor) 2px solid;
+    border-radius: 1rem;
+    margin-left: 2rem;
+}
+
+#left{
+    width: 100%;
+    font-family: var(--josefin), sans-serif;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    color: var(--primaryColor);
+    font-size: xx-large;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+#left h1 i{
+    animation-name: shaking;
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+#left ul{
+    padding: 0 2rem;
+    font-size: x-large;
+}
+
+#left ul li:not(:last-child){margin-bottom: 2rem;}
+
+#left ul li{list-style-type: disc;text-align: center;}
+
+.styled-button{
+    padding: .5rem 1.2rem;
+    margin: 0 auto;
+    font-family: var(--poppins);
+    font-size: medium;
+    display: block;
+    background-color: transparent;
+    color: var(--primaryColor);
+    border: none;
+    border-top: var(--primaryColor) solid 1px;
+    border-bottom: var(--primaryColor) solid 1px;
+    cursor: pointer;
+    letter-spacing: .2rem;
+    transition: all .25s;
+}
+
+.styled-button{margin: 1rem auto;}
+
+.styled-button:hover{letter-spacing: 1rem;}
+/** Animations*/
+#animations {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow-y: hidden;
+}
+
+#animations > div:first-child{
+    height: 100%;
+    width: 25%;
+    background-color: #0488D8;
+    animation-name:onLoad ;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+    animation-duration:10s;
+} 
+
+#animations > div:nth-child(2){
+    left: 25%;
+    height: 100%;
+    width: 25%;
+    background-color: #0488D8;
+    animation-name:onLoad ;
+    animation-delay: 200ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+ #animations > div:nth-child(3){
+    height: 100%;
+    width: 25%;
+    right: 25%;
+    background-color: #0488D8;
+    animation-name:onLoad ;
+    animation-delay: 300ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+#animations > div:last-child{
+    height: 100%;
+    width: 25%;
+    right: 0;
+    background-color: #0488D8;
+    animation-name:onLoad ;
+    animation-delay: 400ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+}  
+
+
+@keyframes onLoad {
+    0%{top:-100%}
+    25%{top: 100%;}
+    100%{top: 100%;}
+}
+
+@keyframes onLeave {
+    0%{top: 100%;}
+    25%{top: -100%;}
+    100%{top: -100%;}
+}
+
+.slow-dipslay{
+    opacity: 0;
+    animation: slow-diplay 2s ease 1s forwards ;
+}
+
+@keyframes slow-diplay{
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
+@keyframes shaking {
+    25%,50%{transform: rotate(8deg);}
+    75%,100%{transform: rotate(-8deg);}
+}

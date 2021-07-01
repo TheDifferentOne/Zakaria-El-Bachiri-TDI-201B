@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="10dp"
+    android:id="@+id/mainLayout">
+
+    <ImageView
+        android:id="@+id/foodPic"
+        android:layout_width="380dp"
+        android:layout_height="380dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/xxdpi_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#99000000"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingHorizontal="10dp">
+        <TextView
+            android:id="@+id/foodNameTxtVw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food name"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:background="@drawable/yellow_border" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+            <TextView
+                android:id="@+id/cookingTimeTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooking Time"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/clock"
+                android:drawablePadding="10dp"/>
+            <TextView
+                android:id="@+id/servingsTxtVw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Servings"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:drawableStart="@drawable/serve"
+                android:drawablePadding="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

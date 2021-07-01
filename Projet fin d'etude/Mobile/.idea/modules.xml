@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PFEMobile.iml" filepath="$PROJECT_DIR$/.idea/modules/PFEMobile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/PFEMobile.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/PFEMobile.app.iml" />
+    </modules>
+  </component>
+</project>

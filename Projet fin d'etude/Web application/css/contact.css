@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primaryColor : #75CC1B;
+    --secondaryColor : #666;
+    --josefin : 'Josefin Sans';
+    --monoton : 'Monoton';
+    --poppins:'Poppins';
+    --padding:11rem;
+    --animation:800ms ease-out;
+}
+
+body{font-size: 62.5%;}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[type="submit"]{cursor: pointer;}
+
+*::selection{
+    background-color: white;
+    color: var(--primaryColor);
+}
+
+li{list-style: none;}
+
+a{text-decoration: none;color: white;}
+
+.padding{padding:0 var(--padding)}
+
+.error{
+    color: #F73333;
+    text-indent: 1rem;
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+}
+    
+.currentPage{ 
+    transition: background var(--animation),color var(--animation);
+    border: var(--primaryColor) 2px solid;
+    border-radius: .5rem;
+    padding: .8rem 1rem;
+}
+
+.currentPage:hover{
+    color: white;
+    background-color: var(--primaryColor);
+}
+
+/*********** Nav and logo ***********/
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: fixed;
+    top:1rem;
+    align-items: center;
+    z-index: 1;
+}
+
+nav ul{
+    display: flex;
+    font-family: var(--josefin),cursive;
+    font-size: large;
+    align-items: center;
+}
+
+nav ul li:not(:last-child){margin-right: 2rem;}
+
+nav a{
+    display: inline-block; 
+    padding:1rem .5rem;
+    color: var(--primaryColor);
+}
+
+#container{
+    height: 100vh; 
+    border-bottom: 50% ;
+    display: flex;
+}
+
+#right,#left{
+    padding-top: 9rem;
+    height: 100%;
+    width: 50%;
+}
+
+#right{
+    padding: 7.5rem 7rem 0  ;
+}
+
+#right > div{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--poppins);
+    border: 3px var(--primaryColor) solid;
+    border-radius: 1rem;
+    padding: 1rem ;
+}
+
+form,#thanksMessage{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    font-size: small;
+    font-weight: bold;
+}
+
+form label{
+    margin-bottom: .2rem;
+}
+
+form input:not([type="submit"]){
+    border: none;
+    outline: none;
+    border-bottom: 2px var(--primaryColor) solid;
+    padding-bottom: .2rem;
+    font-size: medium;
+    font-weight: bold;
+    font-family: var(--josefin);
+    color: var(--primaryColor);
+}
+form label:not(:first-child){
+    margin-top: .8rem;
+}
+
+
+#sendBtn{
+    margin: 1rem 0;
+    padding: .5rem 0;
+    color: var(--primaryColor);
+    background-color: var(--primaryColor);
+    color: white;
+    border: solid var(--primaryColor) 2px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: .2rem;
+    transition:all 300ms ease;
+}
+
+#sendBtn:hover{
+    background-color: white;
+    color: var(--primaryColor);
+}
+
+form textarea{
+    border: none;
+    font-size: medium;
+    outline: none;
+    font-weight: bold;
+    color: var(--primaryColor);
+    border-bottom: 2px var(--primaryColor) solid;
+    font-family: var(--josefin);
+    height: 4rem;
+    resize: none;
+    width: 100%;
+}
+
+#thanksMessage{
+    color: var(--primaryColor);
+    display: block;
+    border: var(--primaryColor) 2px solid;
+    padding: .5rem .8rem;
+    outline-offset: -10px;
+    outline: var(--primaryColor) 1px solid;
+    text-align: center;
+}
+
+#right h2{
+    background-color: var(--primaryColor);
+    color: white;
+    padding: 1rem 1.8rem;
+    border-radius:2.5rem 0 2.5rem ;
+    font-size: x-large;
+    margin-bottom: .5rem;
+}
+
+#left{
+    background-color: var(--primaryColor);
+    color: white;
+    padding-right: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+}
+
+#left > p{
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-family: var(--josefin);    
+    text-align: justify;
+}
+
+
+#info div{
+    display: flex;
+    font-size: xx-large;
+    font-family: var(--josefin);
+    padding: 1rem ;
+    border-radius: .5rem;
+}
+
+
+#info div:hover{border: 4px white solid;}
+
+#info div:first-child{margin-bottom: 2rem;}
+
+#info div:first-child i{
+    transform: rotate(90deg);
+    animation-name: rotation;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+    25%,50%{
+        transform: rotate(0deg);
+    }
+    75%,100%{
+        transform: rotate(90deg);
+    }
+}
+
+#info div:last-child i{
+    animation-name: shaking;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shaking {
+    50%{
+        transform: rotate(8deg);
+    }
+    100%{
+        transform: rotate(-8deg);
+    }
+}
+
+#info i{margin-right: 1.5rem;}
+
+#socialMedia ul {
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#socialMedia ul li{
+    padding: 1.5rem;
+    border-radius: 50%;
+}
+
+#socialMedia ul li:hover{
+    background-color: #3ecc1b;
+}
+
+
+/** Animations on load and leave */
+#animations {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow-y: hidden;
+    animation-name: sendToBack;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes sendToBack {
+    100%{
+        z-index: -10;
+    }
+}
+
+#animations > div:first-child{
+    height: 100%;
+    width: 25%;
+    background-color: #3ecc1b;
+    animation-name:onLoad ;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+
+#animations > div:nth-child(2){
+    left: 25%;
+    height: 100%;
+    width: 25%;
+    background-color: #3ecc1b;
+    animation-name:onLoad ;
+    animation-delay: 200ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+ #animations > div:nth-child(3){
+    height: 100%;
+    width: 25%;
+    right: 25%;
+    background-color: #3ecc1b;
+    animation-name:onLoad ;
+    animation-delay: 300ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+#animations > div:last-child{
+    height: 100%;
+    width: 25%;
+    right: 0;
+    background-color: #3ecc1b;
+    animation-name:onLoad ;
+    animation-delay: 400ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+}  
+
+
+@keyframes onLoad {
+    0%{top:-100%}
+    25%{top: 100%;}
+    100%{top: 100%;}
+}
+
+@keyframes onLeave {
+    0%{top: 100%;}
+    25%{top: -100%;}
+    100%{top: -100%;}
+}
+
+.slow-dipslay{
+    opacity: 0;
+    animation: slow-diplay 2000ms ease 1s forwards ;
+}
+
+@keyframes slow-diplay{
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}

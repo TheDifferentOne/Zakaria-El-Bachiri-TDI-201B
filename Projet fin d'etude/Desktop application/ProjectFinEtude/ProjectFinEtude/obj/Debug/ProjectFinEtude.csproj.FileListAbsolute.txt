@@ -1,0 +1,14 @@
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\bin\Debug\ProjectFinEtude.exe.config
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\bin\Debug\ProjectFinEtude.exe
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\bin\Debug\ProjectFinEtude.pdb
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.loginForm.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.mainForm.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.Properties.Resources.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.csproj.GenerateResource.cache
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.csproj.CoreCompileInputs.cache
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.exe
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.pdb
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.usersUC.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.recipeUC.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.ingredientsForm.resources
+D:\My study life\Projet fin d'etude\Desktop application\ProjectFinEtude\ProjectFinEtude\obj\Debug\ProjectFinEtude.csproj.AssemblyReference.cache

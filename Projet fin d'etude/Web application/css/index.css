@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primaryColor : #F54748;
+    --josefin : 'Josefin Sans';
+    --monoton : 'Monoton';
+    --poppins:'Poppins';
+    --padding:11rem
+}
+
+
+body{
+    font-size: 62.5%;
+    height: auto;
+}
+
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{list-style: none;}
+
+a{
+    text-decoration: none;color: white;}
+
+.primaryColor{color: var(--primaryColor)}
+
+.selectedCountry{background-color: var(--primaryColor); color: white;border-color: Red!important ;}
+
+.currentPage{ font-weight: bold;}
+
+
+.padding{padding:0 var(--padding)}
+
+.firstFood{
+    color: white;
+    background-color: #222;
+}
+
+.setup{
+    color: white;
+    border:4px black groove ;
+    background-color: #444;
+    padding: .2rem .5rem;
+}
+
+.directionInfo{
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    font-size: x-large;
+    margin-bottom: .5rem;
+}
+
+/*********** Nav and logo ***********/
+
+
+nav{
+    padding-top: .5rem  !important;
+    padding-bottom: .5rem  !important;
+    display: flex;    
+    justify-content: space-between;
+    align-items: baseline;
+    color: white;
+    position: sticky!important;
+    top: 0;
+    z-index: 10;
+    transition:background-color 1s ease; 
+}
+
+nav ul{
+    display: flex;
+    font-family: var(--josefin),sans-serif;
+    font-size: large;
+    align-self: center;
+}
+
+nav ul li:not(:last-child){padding-right: 2.5rem;}
+
+nav ul li a{
+    color: white;
+    padding: 1.2rem;
+    transition: background-color 200ms ease;
+}
+
+nav ul li:hover{
+    top:0;
+    transform: scale(1.1);
+}
+
+
+/**Header  */
+header > div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3.8rem;
+    text-shadow: .7rem .7rem .1rem #333;
+    font-family: var(--monoton), cursive;
+    cursor: default;
+}
+
+header{
+    height: calc(100vh - 100px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: url('../img/Background.jpg') no-repeat center center/cover;
+    position: absolute ;
+    top: 0; left: 0;
+    opacity: 0.98;
+    color: white;
+    z-index: -1;
+}
+
+header span::selection, header a::selection, #showMeBtn::selection,a::selection{
+    background: rgba(245, 71, 72,0.7);
+}
+
+li span::selection,h2::selection,h3::selection,h4::selection{
+    background: rgba(245, 71, 72,0.7);
+    color: white;
+}
+
+.heart{
+    margin-left: .5rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: red;
+    background-color: white;
+    text-align: center;
+    font-size: 2.5rem;
+    display: block;
+    text-shadow:initial;
+    margin:.5rem auto 0 auto;  
+}
+
+header > div:first-of-type > span:first-child{
+    align-self: flex-start;  
+}
+
+header > div:first-of-type > span:nth-child(2){
+    align-self: flex-start;
+}
+
+header > div > div {
+    font-size: 3.4rem;
+    align-self: flex-start;
+}
+
+#showMeBtn{
+    width: fit-content;
+    align-self: center;
+    padding: .8rem 1rem;
+    border: white 3px solid ;
+    border-bottom-right-radius: .8rem;
+    border-top-left-radius: .8rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    background-color: transparent;
+    color: white;
+    font-family: var(--poppins),sans-serif;
+    font-size: medium;
+    outline-offset: -7px;
+    transition: outline-offset 300ms ease-in-out;
+}
+
+#showMeBtn:hover{
+    outline-offset: -15px;
+    outline:white solid;
+}
+
+/*********** Section ***********/
+section{
+    background-color: #F5F3F0;
+    padding-top: 1.8rem;
+    padding-bottom: 4rem;
+}
+
+section > h2{
+    text-align: center;
+    font-size: xx-large;
+    font-family: var(--monoton),cursive;
+    color: var(--primaryColor);
+    margin-bottom:2.5rem;
+    border: 2px var(--primaryColor) solid;
+    border-radius: 1rem;
+    width: fit-content;
+    margin:0 auto 3rem;
+    padding: .2rem 1.8rem;
+}
+
+.container{
+    display: flex;
+}
+
+#leftSide{
+    width: 200px;
+}
+
+#leftSide li{
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-family: var(--poppins),sans-serif;
+    border: #A1A9AE 1.5px solid;
+    padding: .2rem 2rem .2rem .5rem;
+    border-radius:2rem ;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#leftSide li:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+#leftSide img{
+    padding: .2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    background-color: white;
+}
+
+#middle{ 
+    /* padding: 0!important; */
+    border-radius: 2rem;
+    margin: 0 2rem;
+    display: flex;
+    /* justify-content: space-between; */
+    height: 250px;
+    cursor: default;
+    background: #ffffff;
+    width:calc(calc(100% - var(--padding))/2); 
+    font-family: var(--josefin),sans-serif;
+}
+
+#middle .img{
+    border-radius: 2.5rem;
+    align-self: center;
+    height: 90%;
+    width: 55%;
+    margin:0 1rem;
+}
+
+#rightSide{
+    width:calc(calc(100% - var(--padding))/2.20); 
+    font-family: var(--josefin),sans-serif;
+}
+
+#middle > div:last-child,#rightSide{
+    padding: 1rem 1rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40%;
+}
+
+#middle h2,#rightSide h2{
+    font-size: 1.7rem;
+    text-align: center;
+    
+}
+
+#middle .foodInfo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+} 
+
+.foodInfo h3{
+    margin-bottom: .5rem;
+}
+
+.foodInfo h4{
+    font-size: medium;
+}
+
+.foodInfo > div:first-child {
+    border-right: #A1A9AE 1px solid;
+    padding-right: .8rem;
+    width: 60%;
+}
+
+#middle > div > div:last-child{
+    display: flex;
+    flex-direction: column;
+}
+
+#detailsBtn{
+    border: 3px var(--primaryColor) solid;
+    color: var(--primaryColor);
+    margin-bottom: .2rem;  
+    width: 100%;
+    padding: .8rem 0;
+    font-family: var(--josefin),sans-serif;
+    background: none;
+    font-size: medium;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+#detailsBtn:hover{
+    background-color: var(--primaryColor)!important;
+    color: white; 
+}
+
+#middle h3,#rightSide h3{
+    color: #666;
+}
+
+#rightSide{padding: 0 2rem;}
+#rightSide > .otherFood{
+    display: flex;
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: all 250ms linear;
+    padding: 1rem 1rem;
+}
+
+.otherFood:hover{
+    top: 0;
+    transform: scale(1.1);
+}
+
+.otherFood:last-child{background-color: white;}
+
+.hot{
+    position: absolute;
+    color: white;
+    background: var(--primaryColor);
+    box-shadow: 0 0 10px red ;
+    padding: .5rem!important;
+    width: min-content!important;
+    right: 30px;
+    border-radius: .3rem;
+    top: -12px;
+}
+
+
+#rightSide .foodInfo{
+    display: flex;
+    padding-left: 1rem;
+    justify-content: space-around;
+}
+
+#rightSide .otherFood:first-child{
+    margin-bottom: .5rem;
+}
+
+#rightSide h2{
+    font-size: x-large;
+    margin-bottom: 1rem;
+}
+
+#rightSide .otherFood > div:last-child{
+    padding: 1.3rem 1.5rem 1.3rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#rightSide .img{
+    width: 28%;
+    height: 90px;
+    align-self: center;
+    border-radius: 50%;
+}
+
+#rightSide .otherFood > div:nth-child(2){
+    width: 70%;
+    align-self: center;
+}
+/** Deatils */
+#details{
+    width: 100%;
+}
+
+#details > div{
+    padding: 2rem;
+    width: 85%;
+}
+
+#details > div ul{
+    font-family: var(--poppins);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#details > div h2{
+    font-family: var(--josefin);
+    font-size: 3rem;
+    border-top: 2px #888 solid;
+    padding: 1rem 4rem 0 0;
+    margin-bottom: 2rem;
+}
+
+#details > div:first-child h2{
+    width: fit-content;
+    padding-right: 30%;
+}
+
+#Directions{text-align: justify;}
+
+/** Footer*/
+footer{
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: .5rem 0;
+    font-family: var(--josefin);
+}
+
+footer p{
+    display: flex;
+    align-items: center;
+    font-size: large;
+}
+
+footer img{
+    width: 25px;height: 25px;
+    border-radius: 50%;
+    margin: 0 .3rem;
+}
+
+/** Animations on load and leave */
+.slow-dipslay{
+    opacity: 0;
+    animation: slow-diplay 2s ease 1s forwards ;
+}
+
+#animations {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow-y: hidden;
+    z-index: 11;
+    animation-name: sendToBack;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+@keyframes sendToBack {
+    100%{
+        z-index: -10;
+    }
+}
+
+#animations > div:first-child{
+    height: 100%;
+    width: 25%;
+    background-color: var(--primaryColor);
+    animation-name:onLoad ;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+
+#animations > div:nth-child(2){
+    left: 25%;
+    height: 100%;
+    width: 25%;
+    background-color: var(--primaryColor);
+    animation-name:onLoad ;
+    animation-delay: 200ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+ #animations > div:nth-child(3){
+    height: 100%;
+    width: 25%;
+    right: 25%;
+    background-color: var(--primaryColor);
+    animation-name:onLoad ;
+    animation-delay: 300ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+} 
+
+#animations > div:last-child{
+    height: 100%;
+    width: 25%;
+    right: 0;
+    background-color: var(--primaryColor);
+    animation-name:onLoad ;
+    animation-delay: 400ms;
+    animation-duration:10s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top: -100%;
+}  
+
+@keyframes onLoad {
+    0%{top:-100%}
+    25%{top: 100%;}
+    100%{top: 100%;}
+}
+
+@keyframes slow-diplay{
+    25%{opacity:0.25}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}

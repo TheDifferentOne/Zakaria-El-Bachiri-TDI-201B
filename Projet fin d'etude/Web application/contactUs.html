@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zak Recipes | Contact us</title>
+        <link rel="stylesheet" href="css/contact.css">
+        <script src="https://kit.fontawesome.com/bb0dd2be61.js" crossorigin="anonymous"></script>
+        <script src="js/contactUs.js" defer></script>
+    </head>
+    <body>
+        <nav class="padding slow-dipslay">
+            <img src="img/logozakwhite.png" width="150px">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mobile.html">Mobile Version</a></li>
+                <li><a class="currentPage" href="#">Contact us</a></li>
+            </ul>   
+        </nav> 
+        <div id="container" class="slow-dipslay">
+            <div id="left" class="padding">
+                <p>We would love to hear from you</p>
+                <div id="info">
+                    <div><i class="fas fa-phone-alt"></i><p>+2126 68 52 13 20</p></div>
+                    <div><i class="fas fa-envelope"></i><p>zakaria_elbachiri@pm.me</p></div>
+                </div>
+                <div id="socialMedia">
+                    <ul>
+                        <li><a target="_blank" href=""><i class="fab fa-facebook fa-4x"></i></a></li>
+                        <li><a target="_blank" href="https://github.com/Thedifferentone"><i class="fab fa-github-alt fa-4x"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/zakaria-el-bachiri-9a30b3169/"><i class="fab fa-linkedin fa-4x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="right" class="padding">
+                <div>
+                    <h2>Contact us</h2>
+                    <form id="form" method="POST" data-netlify="true">
+                        <label for="firstName">First name</label>
+                        <input type="text" name="firstName" id="firstNameTxtBx" placeholder="Enter your last name" required>
+                        <label for="lastName">Last name</label>
+                        <input type="text" name="lastName" id="lastNameTxtBx" placeholder="Enter your last name" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="emailTxtBx" placeholder="Enter your email adress" required>
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phoneTxtBx" placeholder="Enter your phone number">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="messgaeTxtBx" placeholder="Write your message" required></textarea>
+                        <input type="submit" id="sendBtn" value="Send Message">
+                    </form>
+                <div id="thanksMessage">
+                    <p>Thank you <span id="fullName"></span> for contacting us.
+                        We will respond you as soon as possible🙏
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="animations">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </script>
+</body>
+</html>
